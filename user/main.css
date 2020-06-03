@@ -1,0 +1,114 @@
+/* prompt.html CSS Element */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #b3c1d1;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: bold;
+  color: #142a50;
+}
+
+.page_logo {
+  width: 300px;
+  margin-left: 70%;
+  margin-top: 20px;
+  margin-bottom: 15%;
+}
+
+.box_1 {
+  width: 50%;
+  height: 100px;
+}
+
+.box_2 {
+  width: 50%;
+  height: 100px;
+}
+
+.option_box {
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.finder_box {
+  color: white;
+  height: 50px;
+  width: 200px;
+  background-color: #daab27;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+.seeker_box {
+  color: white;
+  height: 50px;
+  width: 200px;
+  background-color: #142a50;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+p {
+  padding: 10px;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+/* seeker.html CSS Element */
+.seeker_logo {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  /* height: 100px; */
+  margin: 0 auto;
+}
+
+@media(max-width: 1027px) {
+  img {
+    display: block;
+  }
+
+  .page_logo {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  .option_box {
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+  }
+
+  .finder_box {
+    margin-top: 50px;
+  }
+  
+  .seeker_box {
+    margin-top: 50px;
+  }
+
+  .box_1{
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .box_2{
+    width: 100%;
+    margin: auto;
+  }
+
+}

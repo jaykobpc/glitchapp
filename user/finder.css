@@ -1,0 +1,176 @@
+/* finder.html CSS Element */
+body{
+    background-color: #feebb1;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: bold;
+    color: #142a50;
+    font-size: 20px;
+}
+
+#Title {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background-color: #e5e5e5;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#img {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#category {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background-color: #e5e5e5;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+
+.logo_contain {
+    margin: auto;
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.finder_logo {
+    width: 300px;
+}
+
+.finder_main_box {
+    border-radius: 3px;
+    padding: 50px;
+    margin: auto;
+    width: 700px;
+    height: 500px;
+
+}
+
+.finder_main_box h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.finder_form_box_1 {
+    display: block;
+    border-radius: 3px;
+    background-color: white;
+    padding: 25px;
+}
+
+.finder_description_box {
+    background-color: #e5e5e5;
+    width: 96%;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 12px;
+}
+
+#text {
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+    outline: none;
+    font-size: 12px;
+    color: black;
+    font-weight: normal;
+}
+
+#finder_next_buttn {
+    display: block;
+    background-color: #daab27;
+    font-size: 25px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    margin-left: 76%;
+    width: 150px;
+    height: 50px;
+}
+
+#finder_next_buttn:hover {
+    box-shadow: 5px 10px #888888;
+}
+
+
+.finder_form_box_2 {
+    margin-bottom: 50px;
+    display: none;
+    border-radius: 3px;
+    background-color: white;
+    padding: 25px;
+}
+
+#date {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.Location_box {
+    background-color: #e5e5e5;
+    border-radius: 3px;   
+    width: 100%;
+    height: 50px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#location_info {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    padding: 15px;
+    width: 95%;
+    height: 17px;
+}
+
+#finder_formBox_2 button {
+    margin-top: 20px;
+    background-color: #daab27;
+    font-size: 25px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    margin-left: 76%;
+    width: 150px;
+    height: 70px;
+}
+
+#finder_formBox_2 button:hover {
+    box-shadow: 5px 10px #888888
+}
+
+#confirm_buttn {
+    display: block;
+}
+
+#submit_buttn {
+    display: none;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+}
+
+  
+  
