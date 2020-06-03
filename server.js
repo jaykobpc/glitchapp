@@ -64,7 +64,7 @@ function sendMediaStore(filename, serverRequest, serverResponse) {
         // stick the image into the formdata object
         form.append("storeImage", fs.createReadStream("./images/" + filename));
         // and send it off to this URL
-        form.submit("http://localhost:3000/fileUploadToAPI", function(
+        form.submit("https://quickest-yellow-octave.glitch.me/fileUploadToAPI", function(
             err,
             APIres
         ) {
@@ -175,6 +175,23 @@ app.get("/api/users", (req, res, next) => {
     });
 });
 
+//get all images filtered to be edited
+app.get("/api/filtered/:seeker", (req, res, next) => {
+  var sql = "select * from LostnFound where category = ? order by rowIdNum"
+    var params = [req.params.seeker]
+    binDB.all(sql, params, (err, rows) => {
+        if (err) {
+            res.status(400).json({ "error": err.message });
+            return;
+        };
+        res.json({
+            "message": "success",
+            "data": rows
+        })
+    });
+});
+
+//working don't tamper with please
 app.get("/api/users/:id", (req, res, next) => {
     var sql = "select imageURL from LostnFound where category = ? order by rowIdNum"
     var params = [req.params.id]
@@ -261,7 +278,7 @@ app.post("/newItem", function(request, response, next) {
     let description = form_info.description;
     let date = form_info.date;
     let location = form_info.location;
-    let image_URL = "http://localhost:3000/images/" + form_info.image_name;
+    let image_URL = "https://quickest-yellow-octave.glitch.me/images/" + form_info.image_name;
 
     // put new item into database
     cmd =
@@ -302,9 +319,13 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const cookieParser = require("cookie-parser");
 const expressSession = require("express-session");
 
-const clientID1 =
-    "634862980696-evfthil6nvkud79ejsetj1j1pgc94vb1.apps.googleusercontent.com";
-const clientSecret1 = "Rl0aDF-qky5f8Qfws660t4CL";
+ const clientID1 =     "634862980696-evfthil6nvkud79ejsetj1j1pgc94vb1.apps.googleusercontent.com";
+ const clientSecret1 = "Rl0aDF-qky5f8Qfws660t4CL";
+//add api clientid  here 
+// const clientID1 =
+//     "";
+// //add api client secret  here 
+// const clientSecret1 = " ";
 
 // Setup passport, passing it information about what we want to do
 passport.use(
@@ -317,7 +338,7 @@ passport.use(
             clientID: clientID1,
             clientSecret: clientSecret1,
             // CHANGE THE FOLLOWING LINE TO USE THE NAME OF YOUR APP
-            callbackURL: "http://localhost:3000/auth/accepted",
+            callbackURL: "https://quickest-yellow-octave.glitch.me/auth/accepted",
             userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo", // where to go for info
             scope: ["profile", "email"], // the information we will ask for from Google
         },
