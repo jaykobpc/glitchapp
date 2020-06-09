@@ -1,4 +1,4 @@
-let url = "http://localhost:3000/api/users";
+let url = "https://quickest-yellow-octave.glitch.me/api/users";
 fetch(url)
     .then((response) => response.json())
     .then((result) => {
